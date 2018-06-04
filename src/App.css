@@ -30,6 +30,8 @@
   border-width: 1px;
   border-color: rgb(170, 170, 170);
   margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
   border-radius: 7px;
 }
 
@@ -48,4 +50,13 @@ h1 {
   border: none;
   padding-right: 4.5px;
   padding-top: 0px;
+}
+
+.Delete-button-text {
+  color: black;
+  font-weight: bold;
+}
+
+.Delete-button-text:hover {
+  color: red;
 }

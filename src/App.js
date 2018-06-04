@@ -20,6 +20,14 @@ class App extends Component {
     });
   };
 
+  removeItem(e, itemId, name) {
+    e.preventDefault();
+    const formRef = firebase.database().ref(`/submittedForms/${itemId}`);
+    if (window.confirm(`Are you sure you want to delete ${name}'s contract?`)) {
+      formRef.remove();
+    }
+  }
+
   componentDidMount() {
     const formsRef = firebase.database().ref("submittedForms");
     formsRef.on("value", snapshot => {
@@ -56,7 +64,12 @@ class App extends Component {
           {this.state.submittedForms.map(form => {
             return (
               <div className="Single-contract">
-                <button className="Delete-button">x</button>
+                <button
+                  className="Delete-button"
+                  onClick={e => this.removeItem(e, form.id, form.name)}
+                >
+                  <div className="Delete-button-text">x </div>
+                </button>
                 <div className="Contract-text">
                   <div className="Field">Name:</div> {form.name} <br />
                   <div className="Field">Company:</div> {form.company}
