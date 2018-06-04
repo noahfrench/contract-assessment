@@ -17,9 +17,11 @@ export default class Form extends Component {
       details: this.props.currentDetails
     };
     let repeatForm = this.props.currentSubmittedForms.some(
-      form => JSON.stringify(form) === JSON.stringify(newForm)
+      form =>
+        form.name === newForm.name &&
+        form.company === newForm.company &&
+        form.details === newForm.details
     );
-
     if (
       this.props.currentName === "" ||
       this.props.currentCompany === "" ||
