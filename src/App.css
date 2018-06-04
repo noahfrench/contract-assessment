@@ -1,28 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400, 400i");
+
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Title {
+  font-size: 3em;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Paper {
+  margin-top: 20px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.Field {
+  font-weight: bold;
+  display: inline;
 }
 
-.App-intro {
-  font-size: large;
+.All-contracts {
+  display: inline-block;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Single-contract {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(170, 170, 170);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 7px;
+}
+
+.Contract-text {
+  margin: 10px;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.Delete-button {
+  float: right;
+  background: none;
+  border: none;
+  padding-right: 4.5px;
+  padding-top: 0px;
+}
+
+.Delete-button-text {
+  color: black;
+  font-weight: bold;
+}
+
+.Delete-button-text:hover {
+  color: red;
 }
