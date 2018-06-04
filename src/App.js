@@ -47,6 +47,7 @@ class App extends Component {
           currentName={this.state.name}
           currentCompany={this.state.company}
           currentDetails={this.state.details}
+          currentSubmittedForms={this.state.submittedForms}
         />
 
         <h1>Submitted Contracts:</h1>
