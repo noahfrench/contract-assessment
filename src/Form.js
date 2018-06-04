@@ -16,10 +16,24 @@ export default class Form extends Component {
       company: this.props.currentCompany,
       details: this.props.currentDetails
     };
-    formsRef.push(newForm);
-    this.props.updateParentState("name", "");
-    this.props.updateParentState("company", "");
-    this.props.updateParentState("details", "");
+    let repeatForm = this.props.currentSubmittedForms.some(
+      form => JSON.stringify(form) === JSON.stringify(newForm)
+    );
+
+    if (
+      this.props.currentName === "" ||
+      this.props.currentCompany === "" ||
+      this.props.currentDetails === ""
+    ) {
+      window.alert("Please fill out all fields.");
+    } else if (repeatForm) {
+      window.alert("This contract is already in the database.");
+    } else {
+      formsRef.push(newForm);
+      this.props.updateParentState("name", "");
+      this.props.updateParentState("company", "");
+      this.props.updateParentState("details", "");
+    }
   }
 
   render() {
