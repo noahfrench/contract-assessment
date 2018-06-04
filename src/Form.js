@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import firebase from "./firebase.js";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import AppBar from "@material-ui/core/AppBar";
 
 export default class Form extends Component {
   constructor(props) {
@@ -26,13 +25,7 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <AppBar>
-          {" "}
-          <div className="Title">Contract Form</div>
-        </AppBar>
-        <br />
-        <br />
-        <br />
+        <div className="Title">Contract Form</div>
         <br />
         <TextField
           label="Name"
@@ -59,7 +52,13 @@ export default class Form extends Component {
         />
         <br />
         <br />
-        <Button onClick={e => this.handleSubmit(e)}>SUBMIT</Button>
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={e => this.handleSubmit(e)}
+        >
+          SUBMIT
+        </Button>
       </div>
     );
   }
