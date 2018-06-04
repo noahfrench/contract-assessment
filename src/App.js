@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import AppBar from "@material-ui/core/AppBar";
 import Form from "./Form.js";
 
 class App extends Component {
@@ -13,13 +12,18 @@ class App extends Component {
       submittedContracts: []
     };
   }
+
+  updateField = (field, newValue) => {
+    this.setState({
+      [field]: newValue
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <AppBar>Contracts</AppBar>
+        <Form updateParentState={this.updateField} />
         <br />
-        <br />
-        <Form />
       </div>
     );
   }
