@@ -1,7 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400, 400i");
+
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .Title {
   font-size: 3em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.Paper {
+  margin-top: 20px;
+}
+
+.Field {
+  font-weight: bold;
+  display: inline;
+}
+
+.All-contracts {
+  display: inline-block;
+  text-align: left;
+}
+
+.Single-contract {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(170, 170, 170);
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+
+.Contract-text {
+  margin: 10px;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 400;
 }

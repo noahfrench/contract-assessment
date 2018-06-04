@@ -48,20 +48,24 @@ class App extends Component {
           currentCompany={this.state.company}
           currentDetails={this.state.details}
         />
-        <br />
-        Submitted Contracts:
-        <br />
-        <br />
-        {this.state.submittedForms.map(form => {
-          return (
-            <div>
-              <div>Name: {form.name}</div>
-              <div>Company: {form.company}</div>
-              <div>Contract Details: {form.details}</div>
-              <br />
-            </div>
-          );
-        })}
+
+        <h1>Submitted Contracts:</h1>
+
+        <div className="All-contracts">
+          {this.state.submittedForms.map(form => {
+            return (
+              <div className="Single-contract">
+                <div className="Contract-text">
+                  <div className="Field">Name:</div> {form.name}
+                  <br />
+                  <div className="Field">Company:</div> {form.company}
+                  <br />
+                  <div className="Field">Contract Details:</div> {form.details}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
