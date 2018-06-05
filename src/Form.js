@@ -3,7 +3,19 @@ import firebase from "./firebase.js";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+/*
+Component that contains the three text fields and the submit button.
+Props from App.js: updateParentState, currentName, currentCompany, 
+currentDetails, currentSubmittedForms
+*/
+
 export default class Form extends Component {
+  /*
+  Triggers when the SUBMIT button is pressed. Check if all the fields
+  are filled out and if the form is already in the database. If it's a 
+  complete form that's not in the database, add it to the database and 
+  reset all the text fields to blank. 
+  */
   handleSubmit(e) {
     e.preventDefault();
     let formsRef = firebase.database().ref("submittedForms");
