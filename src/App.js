@@ -20,6 +20,8 @@ class App extends Component {
     });
   };
 
+  // Remove a contract from the directory when the x button is pressed.
+  // Confirm with the user before removing.
   removeItem(e, itemId, name) {
     e.preventDefault();
     const formRef = firebase.database().ref(`/submittedForms/${itemId}`);
@@ -28,6 +30,8 @@ class App extends Component {
     }
   }
 
+  // Keep the submittedForms array updated with the most current forms stored in
+  // the firebase database
   componentDidMount() {
     const formsRef = firebase.database().ref("submittedForms");
     formsRef.on("value", snapshot => {
