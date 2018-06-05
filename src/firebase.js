@@ -1,7 +1,9 @@
 import firebase from "firebase";
-// Initialize Firebase
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 const config = {
-  apiKey: "AIzaSyCQwgklbvVL3ah3x3aMzwxLDWfS9t-C8Fc",
+  apiKey: API_KEY,
   authDomain: "contract-assessment.firebaseapp.com",
   databaseURL: "https://contract-assessment.firebaseio.com",
   projectId: "contract-assessment",
