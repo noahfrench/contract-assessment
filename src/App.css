@@ -60,3 +60,7 @@ h1 {
 .Delete-button-text:hover {
   color: red;
 }
+
+.Delete-button-text:active {
+  border: none;
+}
